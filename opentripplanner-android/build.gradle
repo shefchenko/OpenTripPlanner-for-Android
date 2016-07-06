@@ -19,7 +19,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.3.0'
+        classpath 'com.android.tools.build:gradle:2.2.0-alpha4'
     }
 }
 apply plugin: 'com.android.application'
@@ -44,7 +44,7 @@ android {
         versionCode 17
         versionName "2.1.4"
         minSdkVersion 9
-        targetSdkVersion 13
+        targetSdkVersion 21
     }
 
     // http://stackoverflow.com/questions/20673625/gradle-0-7-0-duplicate-files-during-packaging-of-apk
@@ -120,9 +120,10 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.4.1'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.4.1.1'
     // POJOs used for full data-binding via Jackson
-    compile 'edu.usf.cutr.opentripplanner.android:opentripplanner-pojos:1.0.0-SNAPSHOT'
+//    compile 'edu.usf.cutr.opentripplanner.android:opentripplanner-pojos:1.0.0-SNAPSHOT'
     // OpenCSV, for parsing the OTP Server Directory Google Doc
     compile 'net.sf.opencsv:opencsv:2.3'
     // Map util (point in bounding box)
     compile 'com.google.maps.android:android-maps-utils:0.4'
+    compile files('libs/opentripplanner-pojos-1.0.0-20140902.170318-20.jar')
 }

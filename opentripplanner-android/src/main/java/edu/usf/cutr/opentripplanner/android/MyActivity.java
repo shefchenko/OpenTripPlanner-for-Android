@@ -259,7 +259,7 @@ public class MyActivity extends FragmentActivity implements OtpFragment {
 
         Fragment directionFragment = new DirectionListFragment();
         transaction.add(R.id.mainFragment, directionFragment);
-        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+//        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         transaction.addToBackStack(null);
 
         transaction.commit();
@@ -282,7 +282,7 @@ public class MyActivity extends FragmentActivity implements OtpFragment {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
         transaction.remove(f);
-        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+//        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         fm.popBackStack();
         transaction.commit();
     }
